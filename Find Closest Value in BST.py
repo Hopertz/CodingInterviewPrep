@@ -1,9 +1,7 @@
 # Find the closest Value in BST
 
 # Using Recursion
-
-# time - O(log(n)) space - O(log(n)) because of frames in call stack
-
+# time - O(log(n))  | space - O(log(n)) because of frames in call stack
 def findclosestvaluebst(tree, target):
     return closestvaluebstfinder(tree, target, tree.value)
 
@@ -22,7 +20,7 @@ def closestvaluebstfinder(tree, target, closest):
 
 
 # Using while Loop
-# time - O(log(n)) space - O(1)
+# time - O(log(n)) | space - O(1)
 def findclosestvaluebst2(tree, target):
     return closestvaluebstfinder2(tree, target, tree.value)
 

@@ -1,7 +1,7 @@
 # THREE LARGEST NUMBERS
 
 # Solution One
-# Running time O(n) space O(1)
+# Running time O(n^2) because of list.remove() space O(1)
 def findThreeLargestNumbers1(array):
     # Write your code here.
     answ = [None, None, None]
@@ -40,6 +40,9 @@ def update(res, elem):
 
 
 def shiftupdate(res, elem, indx):
+    # eg res =[x,y,z] and updating z = num
+    # res = [y,z,num]
+
     for i in range(indx + 1):
         if i == indx:
             res[i] = elem
