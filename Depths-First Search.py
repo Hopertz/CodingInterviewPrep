@@ -11,13 +11,11 @@ class Node:
         return self
 
     def depthFirstSearch(self, array):
-        self.finder(array)
-        return array
-
-    def finder(self, array):
         array.append(self.name)
         childs = self.children
         if childs is None:
             return
         for child in childs:
             child.depthFirstSearch(array)
+
+        return array

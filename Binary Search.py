@@ -1,7 +1,7 @@
 # Binary Search
 
 # Solution one
-# time O(logn)  space O(1)
+# time O(logn) | space O(1)
 def binarySearch1(array, target):
     left = 0
     right = len(array) - 1
@@ -17,9 +17,8 @@ def binarySearch1(array, target):
 
 
 # Solution Two
-# time O(logn)  space O(logn)
+# time O(logn) | space O(logn)
 def binarySearch2(array, target):
-    # Write your code here.
     return binarySearchHelper(array, target, 0, len(array) - 1)
 
 
