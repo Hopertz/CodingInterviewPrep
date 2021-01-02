@@ -1,5 +1,6 @@
 # Selection sort
-# Running time O(n^2)  space 0(1)
+
+# Running time O(n^2) | space 0(1)
 def selectionSort(array):
     for step in range(len(array)):
         min_idx = step

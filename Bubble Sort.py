@@ -1,7 +1,7 @@
 # Bubble Sort
 
-# Solution One
 # Running time O(n^2)  space 0(1)
+
 def bubbleSort1(array):
     for i in range(len(array)):
         for j in range(0, len(array) - i - 1):
@@ -22,7 +22,7 @@ def bubbleSort2(array):
     return array
 
 
-def bubbleSort(array):
+def bubbleSort3(array):
     issorted = False
     counter = 0
     while not issorted:
@@ -30,6 +30,9 @@ def bubbleSort(array):
         for j in range(0, len(array) - counter - 1):
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
+                issorted = False
 
         counter += 1
     return array
+
+
