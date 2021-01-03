@@ -6,17 +6,16 @@
 def getNthFib1(n):
     a = 0
     b = 1
-    cnt = 0
-    while cnt < n:
+    while n:
         nth = a
         a, b = b, a + b
-        cnt += 1
+        n -= 1
 
     return nth
 
 
 # Solution two
-# Running time O(2**n) space 0(n)
+# Running time O(2^n) space 0(n)
 def getNthFib2(n):
     if n == 2:
         return 1

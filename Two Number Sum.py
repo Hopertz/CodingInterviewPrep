@@ -11,7 +11,7 @@ def two_sum1(array, target_sum):
 
 
 def two_sum2(array, target_sum):
-    # time O(n)  space O(n)
+    # time O(n) | space O(n)
     nums = {}
     for num in array:
         potential_num = target_sum - num
@@ -35,10 +35,10 @@ def two_sum3(array, target_sum):
             left += 1
 
         else:
-            right += 1
+            right -= 1
     return []
 
 
-print(two_sum1([3, 6, 5, 9, 2, 7], 14))
-print(two_sum2([3, 6, 5, 9, 2, 7], 14))
-print(two_sum3([3, 6, 5, 9, 2, 7], 14))
+print(two_sum1([3, 6, 5, 9, 2, 7], 11))
+print(two_sum2([3, 6, 5, 9, 2, 7], 11))
+print(two_sum3([3, 6, 5, 9, 2, 7], 11))
