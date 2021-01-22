@@ -33,6 +33,7 @@ def spiralTraverse1(array):
 
 
 # Recursive solution
+# time O(N) | space O(N) - where n is the total number of elements in the array
 def spiralTraverse2(array):
     result = []
     spiral(array, 0, len(array) - 1, 0, len(array[0]) - 1, result)
