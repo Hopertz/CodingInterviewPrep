@@ -1,3 +1,4 @@
+# Tournament Winner
 # O(n) time | O(k) space - where n is the number
 # of competition and k is the number of teams.
 
