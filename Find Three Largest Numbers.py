@@ -1,31 +1,38 @@
-# THREE LARGEST NUMBERS
+""""
+    Find Three Largest Numbers
 
-# Solution One
+    Write a function that takes in an array of at least three integers and ,without
+    sorting the input array,returns a sorted array of the three largest integers in
+    the input array.
+
+    The function should return duplicate integers if necessary; for example, it should
+    return [ 10, 10, 12] for an input array of [10, 5, 9, 10, 12]
+
+    Sample Input
+       array = [141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]
+
+    Sample Output
+       [18, 141, 541]
+"""
+
+
 # Running time O(n^2) because of list.remove() space O(1)
-def findThreeLargestNumbers1(array):
+def findThreeLargestNumbers(array):
     # Write your code here.
     answ = [None, None, None]
     for i in range(2, -1, -1):
-        res = finder(array)
+        res = max(array)
         answ[i] = res
         array.remove(res)
     return answ
 
 
-def finder(array):
-    num = array[0]
-    for elem in array:
-        if elem > num:
-            num = elem
-    return num
-
-
-# Solution Two
 # Running time O(n) space O(1)
-def findThreeLargestNumbers2(array):
+def findThreeLargestNumbers(array):
     res = [None, None, None]
     for elem in array:
         update(res, elem)
+        print(res)
 
     return res
 
@@ -50,5 +57,22 @@ def shiftupdate(res, elem, indx):
             res[i] = res[i + 1]
 
 
-print(findThreeLargestNumbers1([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]))
-print(findThreeLargestNumbers2([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]))
+"""
+   Running the below function
+   findThreeLargestNumbers([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7])
+  
+   Finding three largest number is done like this  for the 2nd solution
+    [None, None, 141]
+    [None, 1, 141]
+    [1, 17, 141]
+    [1, 17, 141]
+    [1, 17, 141]
+    [1, 17, 141]
+    [17, 18, 141]
+    [18, 141, 541]
+    [18, 141, 541]
+    [18, 141, 541]
+    [18, 141, 541]
+ 
+"""
+
