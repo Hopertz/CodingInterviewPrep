@@ -1,4 +1,22 @@
-# THREE NUMBER SUM
+"""
+   THREE NUMBER SUM
+
+   Write a function that takes in a non-empty array of distinct integers and an integer
+   representing a target sum.The function should find all triplets in the triplets in the
+   array that sum up to the target sum and return a to -dimensional array of all these
+   triplets.The numbers in each triplet should be ordered in ascending order,and the triplets
+   themselves should be ordered in ascending order with respect to the numbers they hold.
+
+   If no three numbers sum up to the target sum, the function should return an empty array.
+
+   Sample Input
+      array = [12, 3, 1, 2, -6, 5, -8, 6]
+      target = 0
+
+   Sample Output
+      [[-8,2,6], [-8,3,5], [-6,1,5]]
+
+"""
 
 # time O(n^3) | space O(1)
 def threeNumberSum(array, targetSum):
@@ -17,8 +35,8 @@ def threeNumberSum(array, targetSum):
     return triplets
 
 
-# time O(n^2)  space O(n)
-def threeNumberSum2(array, targetSum):
+# time O(n^2) | space O(n)
+def threeNumberSum(array, targetSum):
     array.sort()
     triplets = []
     for i in range(len(array) - 2):

@@ -50,15 +50,6 @@ def classPhotos(redShirtHeights, blueShirtHeights):
 
     return True
 
-# O(nlogn) time | O(n) space where n is the length of array.
-def classPhotos(redShirtHeights, blueShirtHeights):
-    redShirtHeights.sort()
-    blueShirtHeights.sort()
-    arr = []
-    if len(redShirtHeights) != len(blueShirtHeights):
-        return False
-    for idx in range(len(blueShirtHeights)):
-        diff = abs(blueShirtHeights[idx] - redShirtHeights[idx])
-        arr.append(diff > 0)
 
-    return all(arr)
+
+
