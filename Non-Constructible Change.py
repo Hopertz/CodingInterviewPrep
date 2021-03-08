@@ -11,7 +11,7 @@
   create is 1.
 
   Sample Input
-    coins = [5, 7, 1, 2, 3 , 22]
+    coins = [5, 7, 1, 1, 2, 3 , 22]
 
   Sample Output
      20
