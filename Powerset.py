@@ -37,3 +37,4 @@ def powerset(array, idx=None):
         currentSubset = subsets[i]
         subsets.append(currentSubset + [ele])
     return subsets
+
