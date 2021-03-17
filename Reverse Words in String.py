@@ -20,5 +20,5 @@
     string = "AlgoExperts is the best!"
 
   Sample Output
-     "best the is AlgoExpert"
+     "best the is AlgoExperts"
 """
