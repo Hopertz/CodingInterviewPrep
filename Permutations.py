@@ -9,12 +9,13 @@
 
   Sample Output
     [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+
     
 """
 # Upper Bound: O(n^2*n!) time | O(n*n!) space
 # Roughly: O(n*n!) time | O(n*n!) space
 
-def getPermutation(array):
+def getPermutations(array):
     permutations = []
     permutationsHelper(array, [], permutations)
     return permutations
