@@ -22,4 +22,15 @@
      [0, 0, 0, 1, 1, 1, -1, -1]
 
 """
+# time O(n) | space O(1) where n is the length of array.
+def threeNumberSort(array, order):
+    start, end = 0, len(array) - 1
+    for i in range(len(order)):
+        for j in range(len(array)):
+            if order[i] == array[j] and start < end:
+                array[start], array[j] = array[j], array[start]
+                start += 1
+
+    return array
+
 

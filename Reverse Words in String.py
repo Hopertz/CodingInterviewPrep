@@ -82,8 +82,8 @@ def reverseWordsInString(string):
         while endofWord < len(characters) and characters[endofWord] != " ":
             endofWord += 1
 
-            reverseListRange(characters, startofWord, endofWord - 1)
-            startofWord = endofWord + 1
+        reverseListRange(characters, startofWord, endofWord - 1)
+        startofWord = endofWord + 1
 
     return "".join(characters)
 
