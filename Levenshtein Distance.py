@@ -18,6 +18,14 @@
 
 """
 
+
 def levenshteinDistance(str1, str2):
-    # Write your code here.
-    pass
+    c = 0
+    for i in range(len(str2)):
+         if not str1[0:i] == str2[0:i]:
+            str1 = str1[0:i] + str2[i] + str1[i:]
+            c += 1
+    return c
+
+
+
