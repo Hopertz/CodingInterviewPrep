@@ -1,6 +1,6 @@
 """
   Balanced Brackets
-  
+
   Write a function that takes in a string made up of brackets( (, [, {, ) , ], and } )
   and other optional characters.The function should return a boolean representing whether
   the string is balanced with regards to brackets.
@@ -18,3 +18,7 @@
   Sample Output
     true // it's balanced
 """
+
+def balancedBrackets(string):
+    # Write your code here.
+    pass
