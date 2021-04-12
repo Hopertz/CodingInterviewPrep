@@ -13,3 +13,14 @@
   Sample Output
      [[7,6,4,-1], [7,6,1,2]] //the quadruplets could be ordered differently
 """
+
+le = 18
+w = 6
+c = '.|.'
+lw = (le-3)//2
+
+for i in range(w//2):
+    print(('-'*(lw-(i*3))+(c*i)+c+(c*i)+('-'*(lw-(i*3)))))
+print('WELCOME'.center(le, '-'))
+for i in range(w//2-1, -1, -1):
+    print(('-'*(lw-(i*3))+(c*i)+c+(c*i)+('-'*(lw-(i*3)))))
