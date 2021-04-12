@@ -22,6 +22,7 @@
      // The intervals could be ordered differently.
 """
 
+
 # O(log n) time | O(n) space
 def mergeOverlappingIntervals(intervals):
     intervals.sort()
@@ -36,27 +37,23 @@ def mergeOverlappingIntervals(intervals):
         previous = [x, y]
     return overlaps
 
+
 # O(log n) time | O(n) space
 def mergeOverlappingIntervals(intervals):
     sortedIntervals = sorted(intervals, key=lambda x: x[0])
 
     mergedIntervals = []
-    currentIntervals = sortedIntervals[0]
-    mergedIntervals.append(currentIntervals)
+    currentInterval = sortedIntervals[0]
+    mergedIntervals.append(currentInterval)
 
     for nextInterval in sortedIntervals:
-        _ , currentIntervalsEnd = currentInterval
+        _, currentIntervalsEnd = currentInterval
         nextIntervalStart, nextIntervalEnd = nextInterval
 
         if currentIntervalsEnd >= nextIntervalStart:
             currentInterval[1] = max(currentIntervalsEnd, nextIntervalEnd)
         else:
             currentInterval = nextInterval
-            mergedIntervals.append(currentIntervals)
+            mergedIntervals.append(currentInterval)
 
     return mergedIntervals
-
-
-
-
-
