@@ -14,13 +14,24 @@
      [[7,6,4,-1], [7,6,1,2]] //the quadruplets could be ordered differently
 """
 
-le = 18
-w = 6
-c = '.|.'
-lw = (le-3)//2
 
-for i in range(w//2):
-    print(('-'*(lw-(i*3))+(c*i)+c+(c*i)+('-'*(lw-(i*3)))))
-print('WELCOME'.center(le, '-'))
-for i in range(w//2-1, -1, -1):
-    print(('-'*(lw-(i*3))+(c*i)+c+(c*i)+('-'*(lw-(i*3)))))
+# Average: O(n^2) time | O(n^2) space
+# Worst: O(n^3) time | O(n^2) space
+def fourNumberSum(array, targetSum):
+    allPairsSums = {}
+    quadruplets = []
+
+    for i in range(1, len(array) - 1):
+        for j in range(i + 1, len(array)):
+            currentSum = array[i] + array[j]
+            difference = targetSum - currentSum
+            if difference in allPairsSums:
+                for pair in allPairsSums[difference]:
+                    quadruplets.append(pair + [array[i], array[j]])
+        for k in range(0, i):
+            currentSum = array[i] + array[k]
+            if currentSum not in allPairsSums:
+                allPairsSums[currentSum] = [[array[k], array[i]]]
+            else:
+                allPairsSums[currentSum].append([array[k], array[i]])
+    return quadruplets
