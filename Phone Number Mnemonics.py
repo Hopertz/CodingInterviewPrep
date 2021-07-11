@@ -68,6 +68,8 @@ DIGIT_LETTERS = {
 	'9' :['w','x','y','z']
 }
 
+# O(4^n * n) time | O(4^n * n) space - where n is the length
+# of the phone number
 def phoneNumberMnemonics(phoneNumber):
      currentMnemonic = ['0'] * len(phoneNumber)
      mnemonicsFound = []
