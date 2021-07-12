@@ -16,3 +16,53 @@ Sample Output
    [5, 6, 6, 6, 7, -1, 5]
 
 """
+# O(n) time | O(n) space - where n is the length of the array.
+def nextGreaterElement(array):
+    result = [-1] * len(array)
+    stack = []
+    for idx in range(2*len(array)):
+        circularIdx = idx % len(array)
+        
+        while len(stack) > 0 and array[stack[len(stack) - 1]] < array[circularIdx]:
+            top = stack.pop()
+            result[top] = array[circularIdx]
+            
+        stack.append(circularIdx)
+        
+    return result
+
+
+# O(n) time | O(n) space - where n is the length of the array.
+def nextGreaterElement(array):
+    result = [-1] * len(array)
+    stack = []
+    for idx in range(2*len(array) - 1, -1, -1):
+        circularIdx = idx % len(array)
+        
+        while len(stack) > 0:
+            if stack[len(stack) - 1] <= array[circularIdx]:
+                stack.pop()
+            else:
+                result[circularIdx] =stack[len(stack) - 1]
+                break
+       stack.append(array[circularIdx])
+    return result
+
+
+# O(n^2) time | O(n) space - where n is the length of the array.
+def nextGreaterElement(array):
+    greater_than = []
+    size = len(array)
+    for index in range(size):
+        for nextindex in range(index + 1, 2*size):
+            nextindex = nextindex % size
+            if array[nextindex] > array[index]:
+               greater_than.append(array[nextindex])
+               break
+            elif index == nextindex:
+                greater_than.append(-1)
+                break
+    return greater_than
+				
+			   
+
