@@ -38,16 +38,16 @@ Sample Output
 # O(nlog(n)) time | O(n) space - where n is the number of tasks
 def taskAssignment(k, tasks):
     pairedTasks = []
-    taskdurationsToIndices = getTaskDurationsToIndices(tasks)
+    taskDurationsToIndices = getTaskDurationsToIndices(tasks)
      
     sortedTasks = sorted(tasks)
     for idx in range(k):
           task1Duration = sortedTasks[idx]
-          indiceswithTask1Duration = taskDurationsToIndices[task1duration]
+          indicesWithTask1Duration = taskDurationsToIndices[task1duration]
           task1Index = indicesWithTask1Duration.pop()
           
           task2SortedIndex = len(tasks) - 1 - idx
-          task2Duration = sortedTasks[tasks2SortedIndex]
+          task2Duration = sortedTasks[task2SortedIndex]
           indicesWithTask2Duration = taskDurationsToIndices[task2Duration]
           task2Index = indicesWithTask2Duration.pop()
           
@@ -57,7 +57,7 @@ def taskAssignment(k, tasks):
 
 def getTaskDurationsToIndices(tasks):
     taskDurationsToIndices = {}
-    for idx, taskDuration in enumarate(tasks):
+    for idx, taskDuration in enumerate(tasks):
         if taskDuration in taskDurationsToIndices:
            taskDurationsToIndices[taskDuration].append(idx)
         else:
