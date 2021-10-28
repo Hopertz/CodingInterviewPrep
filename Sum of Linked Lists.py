@@ -26,6 +26,7 @@
 
 """
 
+# SOLUTION 1
 
 class LinkedList:
     def __init__(self, value):
@@ -60,6 +61,7 @@ def sumOfLinkedLists(linkedListOne, linkedListTwo):
 
 
 
+# SOLUTION 2
 
 
 class LinkedList:

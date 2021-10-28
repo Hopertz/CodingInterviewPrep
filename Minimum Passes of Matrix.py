@@ -46,7 +46,8 @@
       3
       
 """
-# Solution #1
+# Solution 1
+
 # O(w * h) | O(w * h) space - where w is the width of the matrix and h is the height
 def minimumPassesOfMatrix(matrix):
     passes = convertNegatives(matrix)
@@ -110,7 +111,8 @@ def containsNegative(matrix):
 
 
 
-#Solution #2
+#Solution 2
+
 # O(w * h) | O(w * h) space - where w is the width of the matrix and h is the height
 def minimumPassesOfMatrix(matrix):
     passes = convertNegatives(matrix)

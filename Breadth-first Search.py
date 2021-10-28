@@ -24,6 +24,8 @@
 """
 
 
+# SOLUTION 1
+
 class Node:
     def __init__(self, name):
         self.children = []

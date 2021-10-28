@@ -27,6 +27,7 @@
                     9    8
 """
 
+# SOLUTION 1
 
 # Recursive
 # O(n) time | O(d) space where d is longest depth of a branch
@@ -46,6 +47,8 @@ class BinaryTree:
         self.left = None
         self.right = None
 
+
+# SOLUTION 2
 
 # Iterative
 # O(n) time | O(n)

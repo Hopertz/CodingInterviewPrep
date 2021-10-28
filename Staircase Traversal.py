@@ -25,6 +25,7 @@
     // 2, 2
 """
 
+# SOLUTION 1
 
 # O(K^n) time | O(n) space where n is the height of the staircase and k is the number of staircase available
 def staircaseTraversal(height, maxSteps):
@@ -41,6 +42,8 @@ def numberOfWaysToTop(height, maxSteps):
     return numberOfWays
 
 
+# SOLUTION 2
+
 # O(K*n) time | O(n) space where n is the height of the staircase and k is the number of staircase available
 def staircaseTraversal(height, maxSteps):
     return numberOfWaysToTop(height, maxSteps, {0: 1, 1: 1})
@@ -56,6 +59,8 @@ def numberOfWaysToTop(height, maxSteps, memoize):
     memoize[height] = numberOfWays
 
     return numberOfWays
+
+# SOLUTION 3
 
 # O(K*n) time | O(n) space where n is the height of the staircase and k is the number of staircase available
 def staircaseTraversal(height, maxSteps):

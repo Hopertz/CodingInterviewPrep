@@ -17,6 +17,7 @@
 
 
 """
+# SOLUTION 1
 
 # O(n*m) time | O(n) space where n and m are the strings lengths.
 def levenshteinDistance(str1, str2):
@@ -39,6 +40,8 @@ def levenshteinDistance(str1, str2):
 
     return dp[-1][-1]
 
+
+# SOLUTION 2
 
 # O(n*m) time | O(n) space where n and m are the strings lengths.
 def levenshteinDistance(str1, str2):

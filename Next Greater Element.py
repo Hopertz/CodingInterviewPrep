@@ -16,6 +16,9 @@ Sample Output
    [5, 6, 6, 6, 7, -1, 5]
 
 """
+
+# SOLUTION 1
+
 # O(n) time | O(n) space - where n is the length of the array.
 def nextGreaterElement(array):
     result = [-1] * len(array)
@@ -31,6 +34,8 @@ def nextGreaterElement(array):
         
     return result
 
+
+# SOLUTION 2
 
 # O(n) time | O(n) space - where n is the length of the array.
 def nextGreaterElement(array):
@@ -48,6 +53,8 @@ def nextGreaterElement(array):
        stack.append(array[circularIdx])
     return result
 
+
+# SOLUTION 3
 
 # O(n^2) time | O(n) space - where n is the length of the array.
 def nextGreaterElement(array):

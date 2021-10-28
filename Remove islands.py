@@ -45,6 +45,7 @@
 """
 
 # Solution #1
+
 # O(wh) time | O(wh) space - where w and h  are the width and height of the input matrix
 def removeIslands(matrix):
     onesConnectedToBorder = [[False for col in matrix[0]] for row in matrix]
@@ -107,6 +108,7 @@ def getNeighbors(matrix, row, col):
        
  
 # Solution #2
+
 # O(wh) time | O(wh) space - where w and h  are the width and height of the input matrix
 def removeIslands(matrix):
     for row in range(len(matrix)):

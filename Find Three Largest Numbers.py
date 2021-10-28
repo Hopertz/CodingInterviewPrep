@@ -15,6 +15,7 @@
        [18, 141, 541]
 """
 
+# SOLUTION 1
 
 # Running time O(n^2) because of list.remove() space O(1)
 def findThreeLargestNumbers(array):
@@ -27,13 +28,13 @@ def findThreeLargestNumbers(array):
     return answ
 
 
+# SOLUTION 2
+
 # Running time O(n) space O(1)
 def findThreeLargestNumbers(array):
     res = [None, None, None]
     for elem in array:
         update(res, elem)
-        print(res)
-
     return res
 
 
@@ -57,22 +58,41 @@ def shiftupdate(res, elem, indx):
             res[i] = res[i + 1]
 
 
-"""
-   Running the below function
-   findThreeLargestNumbers([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7])
-  
-   Finding three largest number is done like this  for the 2nd solution
-    [None, None, 141]
-    [None, 1, 141]
-    [1, 17, 141]
-    [1, 17, 141]
-    [1, 17, 141]
-    [1, 17, 141]
-    [17, 18, 141]
-    [18, 141, 541]
-    [18, 141, 541]
-    [18, 141, 541]
-    [18, 141, 541]
- 
-"""
+# SOLUTION 3
 
+# Running time O(n) space O(1)
+def findThreeLargestNumbers(array):
+    answ = [None, None, None]
+    for num in array:
+        check(answ, num)
+    return answ
+
+
+def check(answ, num):
+    # All values are None
+    if answ[0] == answ[1] == answ[2] is None:
+        answ[2] = num
+    # Two values are None
+    elif answ[0] == answ[1] is None:
+        if num > answ[2]:
+            answ[1], answ[2] = answ[2], num
+        else:
+            answ[1] = num
+    # One Value is None
+    elif answ[0] is None:
+        if num > answ[2]:
+            answ[0], answ[1], answ[2] = answ[1], answ[2], num
+        elif num > answ[1]:
+            answ[0], answ[1] = answ[1], num
+        else:
+            answ[0] = num
+
+    # No Value is None
+    else:
+        if num > answ[2]:
+            answ[0], answ[1], answ[2] = answ[1], answ[2], num
+        elif num > answ[1]:
+            answ[0], answ[1] = answ[1], num
+
+        elif num > answ[0]:
+            answ[0] = num

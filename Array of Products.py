@@ -24,6 +24,8 @@
 """
 
 
+# SOLUTION 1
+
 # O(n^2) time | O(n) space where n is the length of array.
 def arrayOfProducts(array):
     products = [1 for _ in range(len(array))]
@@ -39,6 +41,8 @@ def arrayOfProducts(array):
 
     return products
 
+
+# SOLUTION 2
 
 # O(n) time | O(n) space where n is the length of array.
 def arrayOfProducts(array):

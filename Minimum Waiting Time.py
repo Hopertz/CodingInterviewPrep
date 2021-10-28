@@ -2,7 +2,7 @@
   Minimum Waiting Time
 
   You're given a non-empty array of positive integers representing the amounts
-  of timey that specific queries take to execute.Only one query can be executed at
+  of time that specific queries take to execute.Only one query can be executed at
   a time,but the queries can be executed in any order.
 
   A query's waiting time is defined as the amount of time that it must wait before its
@@ -25,6 +25,7 @@
       17
 """
 
+# SOLUTION 1
 
 # O(nlogn) time | O(1) space where n is the number of queries
 # O(nlogn + n) cancels out to O(nlogn)
@@ -38,6 +39,7 @@ def minimumWaitingTime(queries):
 
     return prev_sum
 
+# SOLUTION 2
 
 # O(nlogn) time | O(1) space where n is the number of queries
 def minimumWaitingTime(queries):

@@ -32,6 +32,7 @@
        // 1 comes immediately after 5.
 """
 
+# SOLUTION 1
 
 # This is an input class. Do not edit.
 class BinaryTree:
@@ -64,6 +65,8 @@ def getInOrderTraversalOrder(node, order=[]):
 
     return order
 
+
+# SOLUTION 2
 
 # This is an input class. Do not edit.
 class BinaryTree:

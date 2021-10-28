@@ -52,7 +52,7 @@
     contains(15): true
 """
 
-
+# SOLUTION 1
 # Recursive solution
 class BST:
     def __init__(self, value):
@@ -132,7 +132,7 @@ class BST:
             currentNode = currentNode.left
         return currentNode.value
 
-
+# SOLUTION 2
 # Iterative solution
 class BST:
     def __init__(self, value):

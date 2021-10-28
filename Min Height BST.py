@@ -44,6 +44,7 @@
 
 """
 
+# SOLUTION 1
 
 # O(n) time | O(n) space
 def minHeightBst(array):
@@ -82,6 +83,8 @@ class BST:
             else:
                 self.right.insert(value)
 
+
+# SOLUTION 2
 
 # O(n) time | O(n) space
 def minHeightBst(array):
@@ -126,6 +129,8 @@ class BST:
             else:
                 self.right.insert(value)
 
+
+# SOLUTION 3
 
 # O(n) time | O(n) space its same as second solution but more cleaner
 def minHeightBst(array):

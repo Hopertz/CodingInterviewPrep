@@ -30,6 +30,7 @@
    // Summing all of the depths yields 16
 """
 
+# SOLUTION 1
 
 # This is the class of the input binary tree.
 class BinaryTree:
@@ -45,6 +46,8 @@ def nodeDepths(root, depth=0):
         return 0
     return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)
 
+
+# SOLUTION 2
 
 # Running time O(n) , space O(h) where n is nodes number in a binary tree,h is node's height
 def nodeDepths(root):

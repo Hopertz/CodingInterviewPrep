@@ -20,6 +20,7 @@
   Sample Output
     True
 """
+# SOLUTION 1
 
 # O(n + m) time | O(c) space - where n is the number of characters,m is the length of the
 # document , and c is the number of unique characters in the string.
@@ -39,6 +40,8 @@ def generateDocument(characters, document):
 
     return True
 
+# SOLUTION 2
+
 # O(m * (n + m)) time | O(1) space - where n is the number of characters,m is the length of the
 # document.
 def generateDocument(characters, document):
@@ -57,6 +60,8 @@ def countCharacterFrequency(character, target):
             frequency += 1
 
     return frequency
+
+# SOLUTION 3
 
 # O(c * (n + m)) time | O(c) space - where n is the number of characters,m is the length of the
 # document , and c is the number of unique characters in the string.

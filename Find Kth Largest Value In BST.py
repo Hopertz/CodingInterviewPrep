@@ -31,6 +31,7 @@
 
 """
 
+# SOLUTION 1
 
 # This is an input class. Do not edit.
 class BST:
@@ -56,6 +57,8 @@ def inOrderTraverse(tree, array):
 
     return array
 
+
+# SOLUTION 2
 
 # This is an input class. Do not edit.
 class BST:

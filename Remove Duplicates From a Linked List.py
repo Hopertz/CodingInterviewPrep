@@ -17,6 +17,9 @@
       1 -> 2 -> 3 -> 4 -> 5 -> 6 // the head node with value 1
 
 """
+
+# SOLUTION 1
+
 class LinkedList:
     def __init__(self, value):
         self.value = value

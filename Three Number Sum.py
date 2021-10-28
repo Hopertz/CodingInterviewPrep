@@ -17,6 +17,7 @@
       [[-8,2,6], [-8,3,5], [-6,1,5]]
 
 """
+# SOLUTION 1
 
 # time O(n^3) | space O(1)
 def threeNumberSum(array, targetSum):
@@ -34,6 +35,8 @@ def threeNumberSum(array, targetSum):
 
     return triplets
 
+
+# SOLUTION 2
 
 # time O(n^2) | space O(n)
 def threeNumberSum(array, targetSum):

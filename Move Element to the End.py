@@ -16,6 +16,7 @@
 
 
 """
+# SOLUTION 1
 
 # O(n) time | O(1) space where n is the length of array.
 def moveElementToEnd(array, toMove):
@@ -29,6 +30,8 @@ def moveElementToEnd(array, toMove):
         i += 1
     return array
 
+
+# SOLUTION 2
 
 # O(n^2) time | O(1) space where n is the length of array.
 def moveElementToEnd(array, toMove):

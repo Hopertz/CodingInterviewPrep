@@ -19,6 +19,7 @@
      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 """
+# SOLUTION 1
 
 # Iterative solution
 # time O(N) | space O(N) - where n is the total number of elements in the array
@@ -51,6 +52,8 @@ def spiralTraverse(array):
 
     return result
 
+
+# SOLUTION 2
 
 # Recursive solution
 # time O(N) | space O(N) - where n is the total number of elements in the array

@@ -16,6 +16,7 @@
 
 """
 
+# SOLUTION 1
 
 # O(n) time | O(1) space - where n is the length of the input string
 # The constant space is because the input string only has lowercase

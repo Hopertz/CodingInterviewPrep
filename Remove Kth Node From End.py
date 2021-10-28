@@ -2,6 +2,7 @@
    Remove Kth Node From End
 """
 
+# SOLUTION 1
 
 # This is an input class. Do not edit.
 class LinkedList:
@@ -41,6 +42,7 @@ def makeList(node):
         nodeList.append(currentNode.value)
     return nodeList
 
+# SOLUTION 2
 
 # This is an input class. Do not edit.
 class LinkedList:

@@ -25,6 +25,7 @@
 
 """
 
+# SOLUTION 1
 
 class BinaryTree:
     def __init__(self, value, left=None, right=None):

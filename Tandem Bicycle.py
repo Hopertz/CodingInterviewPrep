@@ -26,48 +26,47 @@
       32
 """
 
+# SOLUTION 1
+
 # O(nlog(n)) time | O(1) space
 def tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest):
-    sums = 0 
+    sums = 0
     if fastest:
-		sorted_red = sorted(redShirtSpeeds)
-		sorted_blue = sorted(blueShirtSpeeds, reverse = True)
-	 elif not fastest:
-		sorted_red = sorted(redShirtSpeeds)
-		sorted_blue = sorted(blueShirtSpeeds)
-		
-	 for i in range(len(sorted_red)):
-		sums += max(sorted_red[i],sorted_blue[i])
-		   
+        sorted_red = sorted(redShirtSpeeds)
+        sorted_blue = sorted(blueShirtSpeeds, reverse=True)
+    elif not fastest:
+        sorted_red = sorted(redShirtSpeeds)
+        sorted_blue = sorted(blueShirtSpeeds)
+
+    for i in range(len(sorted_red)):
+        sums += max(sorted_red[i], sorted_blue[i])
+
     return sums
 
 
-
+# SOLUTION 2
 
 # O(nlog(n)) time | O(1) space
 def tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest):
     redShirtSpeeds.sort()
-	 blueShirtSpeeds.sort()
-	
-	if fastest:
-		reverseArrayInPlace(redShirtSpeeds)
-		
-	totalSpeed = 0 
-	for idx in range(len(redShirtSpeeds)):
-		rider1 = redShirtSpeeds[idx]
-		rider2 = blueShirtSpeeds[idx]
-		
-		totalSpeed += max(rider1, rider2) 
-	return totalSpeed
-		
-def reverseArrayInPlace(array):
-	start = 0
-	end = len(array) - 1
-	while start < end :
-		array[start], array[end] = array[end], array[start]
-		start += 1
-		end -= 1
-		
-		
-	
+    blueShirtSpeeds.sort()
 
+    if fastest:
+        reverseArrayInPlace(redShirtSpeeds)
+
+    totalSpeed = 0
+    for idx in range(len(redShirtSpeeds)):
+        rider1 = redShirtSpeeds[idx]
+        rider2 = blueShirtSpeeds[idx]
+
+        totalSpeed += max(rider1, rider2)
+    return totalSpeed
+
+
+def reverseArrayInPlace(array):
+    start = 0
+    end = len(array) - 1
+    while start < end:
+        array[start], array[end] = array[end], array[start]
+        start += 1
+        end -= 1

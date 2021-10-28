@@ -16,6 +16,8 @@
       2 // 1x1 + 1x5 and 6x1
 """
 
+# SOLUTION 1
+
 # O(nd) time | O(n) space where d is the number of denoms
 def numberOfWaysToMakeChange(n, denoms):
     ways = [0 for amount in range(n + 1)]

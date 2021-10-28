@@ -23,6 +23,7 @@ Sample Output
   [-5, -2, 1, 2, 3, 4]
 
 """
+# SOLUTION 1
 
 # O(n^2) time | O(n) space - where n is the length of the stack
 def sortStack(stack):

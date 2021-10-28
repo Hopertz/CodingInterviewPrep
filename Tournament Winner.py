@@ -40,6 +40,7 @@
      // Python - 6 points
 """
 
+# SOLUTION 1
 
 # O(n) time | O(k) space - where n is the number
 # of competition and k is the number of teams.
@@ -52,10 +53,12 @@ def tournamentWinner(competitions, results):
             res[awayTeam] = value + 3
         else:
             value = res.setdefault(homeTeam, 0)
-        res[homeTeam] = value + 3
+            res[homeTeam] = value + 3
 
     return max(res, key=res.get)
 
+
+# SOLUTION 2
 
 # O(n) time | O(k) space - where n is the number
 # of competition and k is the number of teams.

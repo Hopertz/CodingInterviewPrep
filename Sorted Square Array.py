@@ -3,7 +3,7 @@
 
    Write a function that takes in non-empty array of integers that are sorted
    in ascending order and returns a new array of the same length with the squares
-   of the original integers also sorted im ascending order.
+   of the original integers also sorted in ascending order.
 
    Sample Input
      array = [1 ,2 ,3, 5, 6, 8, 9]
@@ -11,6 +11,7 @@
    Sample Output
      [1 , 4, 9, 25, 36, 64, 81]
 """
+# SOLUTION 1
 
 # O(nlogn) time | O(n) space - where n is the length of the input array.
 def sortedSquaredArray(array):
@@ -22,6 +23,8 @@ def sortedSquaredArray(array):
 
     sortedSquares.sort()
     return sortedSquares
+
+# SOLUTION 2
 
 # O(n) time | O(n) space - where n is the length of the input array.
 def sortedSquaredArray(array):

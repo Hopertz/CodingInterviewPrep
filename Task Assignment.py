@@ -34,6 +34,7 @@ Sample Output
       [
    
 """
+# SOLUTION 1
 
 # O(nlog(n)) time | O(n) space - where n is the number of tasks
 def taskAssignment(k, tasks):

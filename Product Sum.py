@@ -13,7 +13,7 @@
    3.
 
    Therefore, the product sum of [x,y] is x + y; the product sum of [x, [y, z]]
-   is x +2 * (y+z); the product sum of [x, [y, [z]]] is x +2 * (y+ 3z).
+   is x + 2 * (y+z); the product sum of [x, [y, [z]]] is x +2 * (y+ 3z).
 
    Sample Input
 
@@ -23,11 +23,11 @@
      12 // calculated as : 5 + 2 + 2 * (7 - 1) + 3 + 2 * (6 + 3 * (-13+8) + 4)
 
 """
+# SOLUTION 1
 
 # Running time O(n) | space 0(d) where n is total number of elements including
 # sub-elements, and d is the greatest depth of special arrays in the array.
 def productSum(array, depth=1):
-
     sums = 0
     for elem in array:
         if isinstance(elem, list):

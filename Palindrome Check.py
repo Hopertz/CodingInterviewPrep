@@ -15,6 +15,7 @@
 
 
 """
+# SOLUTION 1
 
 # Running time O(n) | space 0(1)
 def isPalindrome(string):
@@ -28,6 +29,7 @@ def isPalindrome(string):
         right -= 1
     return True
 
+# SOLUTION 2
 
 # Running time O(n^2) | space 0(1)
 def isPalindrome(string):
@@ -36,6 +38,7 @@ def isPalindrome(string):
         reversedstring += string[i]
     return string == reversedstring
 
+# SOLUTION 3
 
 # Running time O(n) | space 0(n)
 def isPalindrome(string):
@@ -44,7 +47,23 @@ def isPalindrome(string):
         reversedchars.append(string[i])
     return string == "".join(reversedchars)
 
+# SOLUTION 4
+
 # Running time O(n) | space 0(n)
 def isPalindrome(string, i=0):
     j = len(string) - 1 - i
     return True if i >= j else string[i] == string[j] and isPalindrome(string, i+1)
+
+# SOLUTION 5
+
+# Below we are using Tail Recursion
+# Running time O(n) | space 0(1)
+def isPalindrome(string, i=0):
+    j = len(string) - 1 - i
+    if i >= j:
+        return True
+    if string[i] != string[j]:
+        return False
+    return isPalindrome(string, i+1)
+
+

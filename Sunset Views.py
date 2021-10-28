@@ -23,6 +23,14 @@
   Sample Output #1
       [1, 3, 6, 7]
 
+    // Below is a visual representation of the sample input.
+    //     _
+    //    | |_ _
+    //   _| | | |_   _
+    //  | | | | | | | |_
+    //  | | | | | |_| | |
+    //  |_|_|_|_|_|_|_|_|
+
 
   Sample Input #2
       buildings = [3, 5, 4, 4, 3, 1, 3, 2]
@@ -32,6 +40,7 @@
       [0, 1]
 
 """
+# SOLUTION 1
 
 # O(n) time | O(n) space
 def sunsetViews(buildings, direction):
@@ -56,6 +65,8 @@ def sunsetViews(buildings, direction):
         return buildingsWithSunsetViews[::-1]
 
     return buildingsWithSunsetViews
+
+# SOLUTION 2
 
 # O(n) time | O(n) space
 def sunsetViews(buildings, direction):

@@ -20,6 +20,7 @@
     true
 """
 
+# SOLUTION 1
 
 # O(n) time | O(1) space
 def hasSingleCycle(array):

@@ -23,22 +23,49 @@
 
 """
 
+# SOLUTION 1
+
 # Running time O(n)| space 0(n) where n is the length of input string
 def runLengthEncoding(string):
-    newstring = []
-    count = 0
-    start = string[0]
+    encodedStringCharacter = []
+    currentRunLength = 1
+
+    for i in range(1, len(string)):
+        currentCharacter = string[i]
+        previousCharacter = string[i-1]
+
+        if currentCharacter != previousCharacter or currentRunLength == 9:
+            encodedStringCharacter.append(str(currentRunLength))
+            encodedStringCharacter.append(previousCharacter)
+            currentRunLength = 0
+
+        currentRunLength += 1
+
+    encodedStringCharacter.append(str(currentRunLength))
+    encodedStringCharacter.append(string[len(string)-1])
+
+    return "".join(encodedStringCharacter)
+
+
+# SOLUTION 2
+
+# Running time O(n)| space 0(n) where n is the length of input string
+def runLengthEncoding(string):
+    encodedStringCharacter = []
+    currentRunLength = 0
+    startCharacter = string[0]
+
     for i in range(len(string)):
 
-        if string[i] != start or count == 9:
-            newstring.append(f'{count}{start}')
-            start = string[i]
-            count = 0
+        if string[i] != startCharacter or currentRunLength == 9:
+            encodedStringCharacter.append(f'{currentRunLength}{startCharacter}')
+            startCharacter = string[i]
+            currentRunLength = 0
 
-        count += 1
+        currentRunLength += 1
 
-    newstring.append(f'{count}{string[i]}')
+    encodedStringCharacter.append(f'{currentRunLength}{string[i]}')
 
-    return "".join(newstring)
+    return "".join(encodedStringCharacter)
 
 

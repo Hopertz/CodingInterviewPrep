@@ -31,6 +31,8 @@
      true
 """
 
+# SOLUTION 1
+
 # O(nlogn) time | O(1) space where n is the length of array.
 def classPhotos(redShirtHeights, blueShirtHeights):
     redShirtHeights.sort(reverse=True)

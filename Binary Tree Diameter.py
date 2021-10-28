@@ -29,6 +29,7 @@
 
 """
 
+# SOLUTION 1
 
 # O(n) time | O(h) space where n is the number of nodes in the binary tree
 # and h is the height of the Binary tree

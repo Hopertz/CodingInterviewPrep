@@ -22,6 +22,8 @@
      [0, 0, 0, 1, 1, 1, -1, -1]
 
 """
+# SOLUTION 1
+
 # time O(n) | space O(1) where n is the length of array.
 def threeNumberSort(array, order):
     position = 0

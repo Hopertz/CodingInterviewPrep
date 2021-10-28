@@ -14,6 +14,8 @@
      330 // 75 + 120 + 135
 """
 
+# SOLUTION 1
+
 # O(n) time | O(n) space
 def maxSubsetSumNoAdjacent(array):
     if not len(array):
@@ -26,6 +28,8 @@ def maxSubsetSumNoAdjacent(array):
         maxSums[i] = max(maxSums[i-1], maxSums[i-2] + array[i])
     return maxSums[-1]
 
+
+# SOLUTION 2
 
 # O(n) time | O(1) space
 def maxSubsetSumNoAdjacent(array):

@@ -17,19 +17,7 @@
 
 """
 
-
-# Running time O(n)| space 0(n)
-def caesarCipherEncryptor1(string, key):
-    alphabets = list('abcdefghijklmnopqrstuvwxyz')
-    key = key % 26
-    newString = []
-    for letter in string:
-        newlettercode = (ord(letter) - 97) + key
-        idx = newlettercode % 26
-        newString.append(alphabets[idx])
-
-    return ''.join(newString)
-
+# SOLUTION 1
 
 # Running time O(n)| space 0(n)
 def caesarCipherEncryptor2(string, key):
@@ -43,4 +31,33 @@ def caesarCipherEncryptor2(string, key):
             newString.append(chr(96 + newLettercode % 122))
 
     return ''.join(newString)
+
+
+# SOLUTION 2
+
+# Running time O(n)| space 0(n)
+def caesarCipherEncryptor(string, key):
+    alphabets = list('abcdefghijklmnopqrstuvwxyz')
+    key = key % 26
+    newString = []
+    for letter in string:
+        newlettercode = (ord(letter) - 97) + key
+        idx = newlettercode % 26
+        newString.append(alphabets[idx])
+
+    return ''.join(newString)
+
+# SOLUTION 3
+
+# Running time O(n)| space 0(n)
+def caesarCipherEncryptor(string, key):
+    newLetters = []
+    newkey = key % 26
+    alphabets = list('abcdefghijklmnopqrstuvwxyz')
+
+    for letter in string:
+        newLettercode = alphabets.index(letter) + key
+        newLetters.append(alphabets[newLettercode % 26])
+
+    return ''.join(newLetters)
 

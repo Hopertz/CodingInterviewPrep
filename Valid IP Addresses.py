@@ -37,6 +37,7 @@
     // The IP addresses could be ordered differently
 """
 
+# SOLUTION 1
 
 # O(1) time | O(1) space
 def validIPAddresses(string):

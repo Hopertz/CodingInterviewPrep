@@ -13,11 +13,13 @@
      3
 """
 
+# SOLUTION 1
+
 # Running time O(logn) | space O(1)
 def binarySearch1(array, target):
     left = 0
     right = len(array) - 1
-    while left <= right:  # or left > right
+    while left <= right:  # or not (left > right)
         mid = (left + right) // 2
         if target > array[mid]:
             left = mid + 1
@@ -27,6 +29,7 @@ def binarySearch1(array, target):
             return mid
     return -1
 
+# SOLUTION 2
 
 # time O(logn) | space O(logn)
 def binarySearch(array, target):

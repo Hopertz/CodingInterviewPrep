@@ -19,6 +19,8 @@
     true // it's balanced
 """
 
+# SOLUTION 1
+
 # O(n) time | O(n) space
 def balancedBrackets(string):
     openingBrackets = '([{'

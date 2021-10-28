@@ -20,6 +20,8 @@
        true
 """
 
+# SOLUTION 1
+
 # time O(n) | space O(1)
 def isMonotonic(array):
     isnonedecreasing = True

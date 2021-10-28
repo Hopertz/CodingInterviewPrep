@@ -16,6 +16,7 @@ Sample Output
 
 
 """
+# SOLUTION 1
 
 # O(n * l) time | O(c) space - where n is the number of words,l is the length of the longest word, 
 # and c is the number of unique characters across all words.

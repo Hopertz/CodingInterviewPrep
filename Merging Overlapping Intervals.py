@@ -22,6 +22,7 @@
      // The intervals could be ordered differently.
 """
 
+# SOLUTION 1
 
 # O(log n) time | O(n) space
 def mergeOverlappingIntervals(intervals):
@@ -37,6 +38,8 @@ def mergeOverlappingIntervals(intervals):
         previous = [x, y]
     return overlaps
 
+
+# SOLUTION 2
 
 # O(log n) time | O(n) space
 def mergeOverlappingIntervals(intervals):

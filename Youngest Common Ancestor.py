@@ -34,6 +34,7 @@
      node B
 """
 
+# SOLUTION 1
 
 # This is an input class. Do not edit.
 class AncestralTree:

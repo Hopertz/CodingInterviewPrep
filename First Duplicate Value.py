@@ -29,6 +29,7 @@
 
 """
 
+# SOLUTION 1
 
 # O(n) time | O(n) | space where n is the length of array
 def firstDuplicateValue(array):
@@ -39,6 +40,8 @@ def firstDuplicateValue(array):
         duplicates[num] = duplicates.get(num, 1)
     return -1
 
+# SOLUTION 2
+
 # O(n) time | O(n) | space where n is the length of array
 def firstDuplicateValue(array):
     seen = set()
@@ -48,6 +51,8 @@ def firstDuplicateValue(array):
         seen.add(value)
     return -1
 
+# SOLUTION 3
+
 # O(n) time | O(1) | space where n is the length of array
 def firstDuplicateValue(array):
     for value in array:
@@ -56,6 +61,8 @@ def firstDuplicateValue(array):
             return absValue
         array[absValue - 1] *= -1
     return -1
+
+# SOLUTION 4
 
 # O(n^2) time | O(1) | space where n is the length of array
 def firstDuplicateValue(array):

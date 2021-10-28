@@ -22,6 +22,8 @@
    ['A','B','E','F','I','J','C','D','G','K','H']
 """
 
+# SOLUTION 1
+
 class Node:
     def __init__(self, name):
         self.children = []

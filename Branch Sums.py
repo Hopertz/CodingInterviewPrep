@@ -28,6 +28,7 @@
    // 11 == 1 + 3 + 7
 
 """
+# SOLUTION 1
 
 # Running time O(N) space O(N), where N represents the number of Nodes
 class BinaryTree:

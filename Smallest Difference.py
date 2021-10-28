@@ -19,6 +19,7 @@
     [28,26]
 
 """
+# SOLUTION 1
 
 # time O(n^2) | space O(1)
 def smallestDifference(arrayOne, arrayTwo):
@@ -34,6 +35,8 @@ def smallestDifference(arrayOne, arrayTwo):
                 smallestSecond = arrayTwo[j]
     return [smallestFirst, smallestSecond]
 
+
+# SOLUTION 2
 
 # time O(nlog(n) + O(mlog(m)) | space O(1)
 def smallestDifference(arrayOne, arrayTwo):

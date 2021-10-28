@@ -36,6 +36,7 @@
 
 
 """
+# SOLUTION 1
 
 # O(N) time | O(N) space where N is the total number elements in the matrix.
 def riverSizes(matrix):

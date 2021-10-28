@@ -24,6 +24,7 @@
     True
 """
 
+# SOLUTION 1
 
 class BST:
     def __init__(self, value):

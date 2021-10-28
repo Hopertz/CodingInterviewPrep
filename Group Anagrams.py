@@ -15,6 +15,7 @@
      [["yo","oy"], ["flop", "olfp"], ["act", "tac", "cat"], ["foo"]]
 
 """
+# SOLUTION 1
 
 # O(w * n * log(n) time | O(n) space - where w is the number of words
 # where n is the length of the longest word.

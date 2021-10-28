@@ -27,6 +27,8 @@
       10
 """
 
+# SOLUTION 1
+
 # O(2^(n + m)) time | O(n + m) space where n is the width of the graph and
 # m is the height
 def numberOfWaysToTraverseGraph(width, height):
@@ -34,6 +36,8 @@ def numberOfWaysToTraverseGraph(width, height):
         return 1
     return numberOfWaysToTraverseGraph(width - 1, height) + numberOfWaysToTraverseGraph(width, height - 1)
 
+
+# SOLUTION 2
 
 # O(n * m) time | O(n * m) space where n is the width of the graph and
 # m is the height

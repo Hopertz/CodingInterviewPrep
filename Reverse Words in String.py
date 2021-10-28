@@ -23,6 +23,7 @@
      "best! the is AlgoExperts"
 """
 
+# SOLUTION 1
 
 # time O(n*w) | space O(1) n is the length of string.
 # w is the length of new word formed.
@@ -42,6 +43,8 @@ def reverseWordsInString(string):
         newWord += string[indx]
     return result
 
+
+# SOLUTION 2
 
 # time O(n) | space O(n) where n is the length of string.
 def reverseWordsInString(string):
@@ -71,6 +74,7 @@ def reverseList(list):
         end -= 1
 
 
+# SOLUTION 3
 # time O(n) | space O(n) where n is the length of string.
 def reverseWordsInString(string):
     characters = [char for char in string]

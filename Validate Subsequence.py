@@ -18,9 +18,10 @@
       True
 
 """
+# SOLUTION 1
 
+# Time O(n) Space O(1)
 def validatedSub(array, subsequence):
-    # time O(n) space O(1)
     seq_id = 0
     for value in array:
         if value == subsequence[seq_id]:
@@ -28,12 +29,13 @@ def validatedSub(array, subsequence):
 
         if seq_id == len(subsequence):
             return True
-
     return False
 
 
+# SOLUTION 2
+
+# Time O(n) Space O(1)
 def validatedSub(array, subsequence):
-    # time O(n) space O(1)
     arr_id = 0
     seq_id = 0
     while arr_id < len(array) and seq_id < len(subsequence):

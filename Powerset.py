@@ -16,6 +16,8 @@
         
 """
 
+# SOLUTION 1
+
 # time O(n^2^n) | space O(n^2^n )
 def powerset(array):
     subsets = [[]]
@@ -24,6 +26,9 @@ def powerset(array):
             currentSubset = subsets[i]
             subsets.append(currentSubset + [ele])
     return subsets
+
+
+# SOLUTION 2
 
 # time O(n^2^n) | space O(n^2^n )
 def powerset(array, idx=None):

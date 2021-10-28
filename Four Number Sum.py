@@ -14,6 +14,7 @@
      [[7,6,4,-1], [7,6,1,2]] //the quadruplets could be ordered differently
 """
 
+# SOLUTION 1
 
 # Average: O(n^2) time | O(n^2) space
 # Worst: O(n^3) time | O(n^2) space

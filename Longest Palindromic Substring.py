@@ -15,6 +15,8 @@
     "xyzzyz"
 """
 
+# SOLUTION 1
+
 # O(n^3) time | O(n) space
 def longestPalindromicSubstring(string):
     longest = ''

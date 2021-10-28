@@ -19,6 +19,7 @@
      3 // 2x1 + 1x5
 """
 
+# SOLUTION 1
 
 # time O(n*d) | space O(n) n is the length of string.
 # where d is the length of denoms
@@ -32,6 +33,8 @@ def minNumberOfCoinsForChange(n, denoms):
 
     return numOfCoins[n] if numOfCoins[n] != float('inf') else -1
 
+
+# SOLUTION 2
 
 # The below solution is greedy solution it doesn't work in all cases
 def minNumberOfCoinsForChange(n, denoms):

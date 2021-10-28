@@ -27,10 +27,12 @@
      13
 """
 
+# SOLUTION 1
+
 # Using Recursion
 # time - O(log(n))  | space - O(log(n)) because of frames in call stack
 def findclosestvalueSub(tree, target):
-    return closestvaluebstfinder(tree, target, tree.value)
+    return closestvaluebstfinder(tree, target, float('inf'))
 
 
 def closestvaluebstfinder(tree, target, closest):
@@ -46,10 +48,12 @@ def closestvaluebstfinder(tree, target, closest):
         return closest
 
 
+# SOLUTION 2
+
 # Using while Loop
 # time - O(log(n)) | space - O(1)
 def findclosestvalueBst(tree, target):
-    return closestvalueBst(tree, target, tree.value)
+    return closestvalueBst(tree, target, float('inf'))
 
 
 def closestvalueBst(tree, target, closest):

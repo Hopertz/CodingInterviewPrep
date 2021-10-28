@@ -32,6 +32,7 @@
        true
    
 """
+# SOLUTION 1
 
 # Do not edit the class below except for the
 # populateSuffixTrieFrom and contains methods.
@@ -43,20 +44,20 @@ class SuffixTrie:
         self.endSymbol = "*"
         self.populateSuffixTrieFrom(string)
     
-	 # O(n^2) time | O(n^2) space
+     # O(n^2) time | O(n^2) space
     def populateSuffixTrieFrom(self, string):
         for i in range(len(string)):
-	         self.insertSubstringStartingAt(i,string)
-	
+             self.insertSubstringStartingAt(i,string)
+
     def insertSubstringStartingAt(self, i, string):
-	     node = self.root
-	     for j in range(i, len(string)):
-	         letter = string[j]
-	         if letter not in node:
-	            node[letter] = {}
-	         node = node[letter]
-		      node[self.endSymbol] = True
-		
+         node = self.root
+         for j in range(i, len(string)):
+             letter = string[j]
+             if letter not in node:
+                node[letter] = {}
+             node = node[letter]
+              node[self.endSymbol] = True
+
     # O(m) time | O(1) space
     def contains(self, string):
         node = self.root

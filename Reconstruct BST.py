@@ -33,6 +33,7 @@
    1        10
 """
 
+# SOLUTION 1
 
 # This is an input class. Do not edit.
 class BST:
@@ -61,6 +62,8 @@ def reconstructBst(preOrderTraversalValues):
 
     return BST(currentValue, leftSubtree, rightSubtree)
 
+
+# SOLUTION 2
 
 # This is an input class. Do not edit.
 class BST:
